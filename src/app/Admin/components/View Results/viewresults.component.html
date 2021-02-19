@@ -1,0 +1,20 @@
+<div class="color">
+    <div class="table1">
+        <table>
+          <tr>
+              <th>Event Name</th>
+              <th>Position</th>
+              <th>Holder Name</th>
+
+               </tr>
+          <tr *ngFor="let rus of resultService.results">
+              <td>{{rus.eventname}}</td>
+              <td>{{rus.position}}</td>
+              <td>{{rus.holdername}}</td>
+
+              </tr>
+                </table>
+    
+        
+    </div>
+    </div>
