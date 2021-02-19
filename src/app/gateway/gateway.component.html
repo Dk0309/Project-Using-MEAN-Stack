@@ -1,0 +1,116 @@
+<body>
+	
+
+
+  <div class="wrapper">
+    <div class="payment">
+      <div class="payment-logo">
+        <p>p</p>
+      </div>
+      
+      
+      <h2>Payment Gateway</h2>
+      <div class="form">
+          <form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="checkoutService.selectedCheckout._id">
+            <div class="card space icon-relative">
+              <label class="label">Name:</label>
+              <input type="text" class="input" name="name" #name="ngModel" [(ngModel)]="checkoutService.selectedCheckout.name" 
+            placeholder="Student name" required >
+              <i class="fas fa-user"></i>
+            </div>
+        <div class="card space icon-relative">
+        <label class="label">Event Name:</label>
+        <input type="text" class="input" name="event" #name="ngModel" [(ngModel)]="checkoutService.selectedCheckout.event" 
+        placeholder="Event name" required >
+         
+        <i class="fas fa-user"></i>
+      </div>
+        <div class="card space icon-relative">
+          <label class="label">Card holder:</label>
+          <input type="text" class="input" placeholder="Coding Market">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="card space icon-relative">
+          <label class="label">Card number:</label>
+          <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="card-grp space">
+          <div class="card-item icon-relative">
+            <label class="label">Expiry date:</label>
+            <input type="text" name="expiry-data" class="input" data-mask="00 / 00"  placeholder="00 / 00">
+            <i class="far fa-calendar-alt"></i>
+          </div>
+          <div class="card-item icon-relative">
+            <label class="label">CVC:</label>
+            <input type="text" class="input" data-mask="000" placeholder="000">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+        <input class="button"  type="submit" [disabled]="!checkoutForm.valid">
+        <!-- <input type="btn"  [disabled]="!checkoutForm.valid">
+        Pay
+           -->
+        
+        </form>
+        </div>
+        </div>
+      
+    
+  </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  
+  </body>
+  <!-- <form #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm)"> 
+      <div class="table"  cellpadding="10">
+        <div class="formlimit">
+          <td><input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="eventService.selectedEvent._id"></td>
+    <tr>
+          <td>Name*</td>
+    
+    <td><input type="text" name="name" #name="ngModel" [(ngModel)]="eventService.selectedEvent.name" 
+            placeholder="Enter your name" required >
+           
+        </td>
+      
+        </tr>
+        <tr>
+           <td>Date*</td>
+              <td><input type="date" name="date" #date="ngModel" [(ngModel)]="eventService.selectedEvent.date" 
+                placeholder="Enter date " required  >
+                
+                </td>
+            </tr> 
+          
+              <tr>
+                <td>Type*</td>
+                <td><input type="text" name="type" #type="ngModel" [(ngModel)]="eventService.selectedEvent.type"  
+                  placeholder="Enter type of event " required>
+                  
+                </td>
+                  </tr>
+                
+                  <tr> 
+                      <td>Teacher*</td>
+ <td><input type="text" name="teacher" #name="ngModel" [(ngModel)]="eventService.selectedEvent.teacher"    
+        placeholder="Enter  teacher name"  required>
+                      </td>
+                    </tr>
+                    <tr>
+                    <td>Fees*</td>
+                    <td><input type="number" #name="ngModel" [(ngModel)]="eventService.selectedEvent.fees" name="fees"   
+                      placeholder="Enter event fees" required >
+                    </td>
+                  <tr>          
+  <td align-center colspan="2">
+  
+      <input class="button" type="reset" (click)="resetForm(eventForm)">
+      <input class="button"  type="submit" [disabled]="!eventForm.valid">
+  </td>
+</tr>                     
+</div>         
+      </div>
+      </form>   -->
