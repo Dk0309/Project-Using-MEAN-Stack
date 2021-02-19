@@ -1,1 +1,31 @@
 
+        <div class="color">
+                <div class="table1">
+                    <table>
+                      <tr>
+                          <th>Name</th>
+                          <th>Date</th>
+                          <th>Type</th>
+                          <th>Teacher</th>
+                          <th>Fees</th>
+                          <th></th>
+                      </tr>
+                      <tr *ngFor="let eve of eventService.events">
+                          <td>{{eve.name}}</td>
+                          <td>{{eve.date}}</td>
+                          <td>{{eve.type}}</td>
+                          <td>{{eve.teacher}}</td>
+                          <td>{{eve.fees}}</td>
+                          <td>
+                              <a class="action-btn" (click)="Register()">
+                                  <i class="fa fa-edit">Register!!</i>
+                                </a>
+                                
+                              </td>
+                          </tr>
+                            </table>
+                
+                    
+                </div>
+                </div>
+
