@@ -1,1 +1,19 @@
-
+<body>
+    <div class="color">
+        <div class="contact-section">
+            <h1>Contact Us</h1>
+            <div class="border"></div>
+             <form class="contact-form"  #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="contactService.selectedContact._id">
+    <input type="text"class="contact-form-text" name="name" #name="ngModel" [(ngModel)]="contactService.selectedContact.name" placeholder="Your name" required>
+    <input type="email" class="contact-form-text" [pattern]="emailRegex"  name="email" #name="ngModel" [(ngModel)]="contactService.selectedContact.email" placeholder="Your email" required >
+    <input type="text" class="contact-form-text" name="phone" #name="ngModel" [(ngModel)]="contactService.selectedContact.phone"  placeholder="Your phone" required>
+    <textarea class="contact-form-text" name="message" #name="ngModel" [(ngModel)]="contactService.selectedContact.message"  placeholder="Your message" required></textarea> 
+    <input type="submit" class="contact-form-btn" value="Send"> 
+    </form>>
+        </div>
+    </div>
+    
+    
+    
+</body>
