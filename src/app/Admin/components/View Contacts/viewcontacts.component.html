@@ -1,0 +1,22 @@
+<div class="color">
+        <div class="table1">
+            <table>
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Message</th>
+
+                   </tr>
+              <tr *ngFor="let cont of contactService.contacts">
+                  <td>{{cont.name}}</td>
+                  <td>{{cont.email}}</td>
+                  <td>{{cont.phone}}</td>
+                  <td>{{cont.message}}</td>
+
+                  </tr>
+                    </table>
+        
+            
+        </div>
+        </div>
