@@ -1,0 +1,76 @@
+<body>
+    <div class="color">
+        <div class="contact-section">
+            <h1>Contact Us</h1>
+            <div class="border"></div>
+             <form class="contact-form"  #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="contactService.selectedContact._id">
+    <input type="text"class="contact-form-text" name="name" #name="ngModel" [(ngModel)]="contactService.selectedContact.name" placeholder="Your name">
+    <input type="email" class="contact-form-text" name="email" #name="ngModel" [(ngModel)]="contactService.selectedContact.email" placeholder="Your email">
+    <input type="text" class="contact-form-text" name="phone" #name="ngModel" [(ngModel)]="contactService.selectedContact.phone"  placeholder="Your phone">
+    <textarea class="contact-form-text" name="message" #name="ngModel" [(ngModel)]="contactService.selectedContact.message"  placeholder="Your message"></textarea> 
+    <input type="submit" class="contact-form-btn" value="Send"> 
+    </form>>
+        </div>
+    </div>
+    
+    
+    
+</body>
+<!-- 
+
+<div class="color">
+    <section>
+      <div class="form1">
+            
+                <form  #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm)"> 
+                    <div class="table"  cellpadding="10">
+                      <div class="formlimit">
+                        <td><input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="eventService.selectedEvent._id"></td>
+                  <tr>
+                        <td>Name*</td>
+                  
+                  <td><input type="text" name="name" #name="ngModel" [(ngModel)]="eventService.selectedEvent.name" 
+                          placeholder="Enter your name" required >
+                         
+                      </td>
+                    
+                      </tr>
+                      <tr>
+                         <td>Date*</td>
+                            <td><input type="date" name="date" #date="ngModel" [(ngModel)]="eventService.selectedEvent.date" 
+                              placeholder="Enter date " required  >
+                              
+                              </td>
+                          </tr> 
+                        
+                            <tr>
+                              <td>Type*</td>
+                              <td><input type="text" name="type" #type="ngModel" [(ngModel)]="eventService.selectedEvent.type"  
+                                placeholder="Enter type of event " required>
+                                
+                              </td>
+                                </tr>
+                              
+                                <tr> 
+                                    <td>Teacher*</td>
+               <td><input type="text" name="teacher" #name="ngModel" [(ngModel)]="eventService.selectedEvent.teacher"    
+                      placeholder="Enter  teacher name"  required>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                  <td>Fees*</td>
+                                  <td><input type="number" #name="ngModel" [(ngModel)]="eventService.selectedEvent.fees" name="fees"   
+                                    placeholder="Enter event fees" required >
+                                  </td>
+                                <tr>          
+                <td align-center colspan="2">
+                
+                    <input class="button" type="reset" (click)="resetForm(eventForm)">
+                    <input class="button"  type="submit" [disabled]="!eventForm.valid">
+                </td>
+              </tr>                     
+              </div>         
+                    </div>
+                    </form>   
+      </div>     -->
