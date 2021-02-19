@@ -1,0 +1,160 @@
+<!-- <div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="col s5">
+                          <form #teacherForm="ngForm" (ngsubmit)="onSubmit(teacherForm)">
+                              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="teacherService.selectedTeacher._id">
+                              <div class="row">
+                                  <div class="input-field col s12">
+                                      <input type="text" name="name" #name="ngModel" [(ngModel)]="teacherService.selectedTeacher.name" placeholder="Enter Full name" required>
+                                      <label>Name:
+                                          <label class="red-text">*</label>
+                                      </label>
+
+                                  </div>
+                              </div>
+                              <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="email" #name="ngModel" [(ngModel)]="teacherService.selectedTeacher.email" placeholder="Enter Full name">
+                                    <label>Email:
+                                        <label class="red-text">*</label>
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="number" name="contact" #name="ngModel" [(ngModel)]="teacherService.selectedTeacher.contact" placeholder="Enter Contact No.">
+                                    <label>Contact:
+                                        <label class="red-text">*</label>
+                                    </label>
+
+                                </div>
+                            </div>
+                               <div class="row">
+                                   <div class="input-field col s12">
+                                       <button class="btn btn-custom right" type="button" (click)="resetForm(teacherForm)">Reset</button>
+                                       <button class="btn btn-custom right" type="submit" [disabled]="!teacherForm.valid">Submit</button>
+                                   </div>
+                               </div>
+
+                          </form>
+                    </div>
+                    <div class="col s7">
+                    <table class="responsive-table highlight">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tr *ngFor = "let teach of teacherService.teachers">
+                            <td>{{teach.name}}</td>
+                            <td>{{teach.email}}</td>
+                            <td>{{teach.contact}}</td>
+                            <td>
+                                <a class="action-btn" (click)="onEdit(teach)">
+                                <i class="material-icons">edit</i>
+
+                                </a>
+                                <a class="action-btn" (click)="onDelete(teach._id.teacherForm)">
+                                 <i class="material-icons">delete</i>   
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+ <div class="color">
+        <section>
+          <div class="form1">
+                
+                    <form #teacherForm="ngForm" (ngSubmit)="onSubmit(teacherForm)"> 
+                        <div class="table"  cellpadding="10">
+                          <div class="formlimit">
+                            <td><input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="teacherService.selectedTeacher._id"></td>
+                      <tr>
+                            <td>Name*</td>
+                      
+                      <td><input type="text" style="padding: 5px;" name="name" #name="ngModel" [(ngModel)]="teacherService.selectedTeacher.name" 
+                              placeholder="Enter your name" required >
+                             
+                          </td>
+                        
+                          </tr>
+                          <tr>
+                             <td>Email*</td>
+                                <td><input type="email" style="padding: 5px;" name="email" #email="ngModel" [(ngModel)]="teacherService.selectedTeacher.email" 
+                                  placeholder="Enter email" required  >
+                                  <!-- <span style="font-weight: bold;color: red;" *ngIf="!loginForm.controls['Email'].valid&&loginForm.controls['Email'].dirty">
+                                        <span *ngIf="loginForm.controls.Email.errors.required">Email is Required.</span>
+                                         <span *ngIf="loginForm.controls.Email.errors.email">Email is not in correct pattern.</span>
+                                      </span>-->
+                                  </td> 
+                              </tr> 
+                            
+                                <tr>
+                                  <td>Number*</td>
+                                  <td><input type="contact" style="padding: 5px;" name="contact" #contact="ngModel" [(ngModel)]="teacherService.selectedTeacher.contact"  
+                                    placeholder="Enter Phone Number " required>
+                                    
+                                  </td>
+                                    </tr>
+                                    <tr>
+                                            <td>Password*</td>
+                                            <td><input type="password" style="padding: 5px;" name="password" #password="ngModel" [(ngModel)]="teacherService.selectedTeacher.password"  
+                                              placeholder="Enter Password " required>
+                                              
+                                            </td>
+                                              </tr>
+                                  
+                                    <tr>          
+                    <td align-center colspan="2">
+                    
+                        <input class="button" type="reset" (click)="resetForm(eventForm)">
+                        <input class="button"  type="submit" [disabled]="!eventForm.valid">
+                    </td>
+                  </tr>                     
+                  </div>         
+                        </div>
+                        </form>   
+          </div>    
+           <div class="table1">
+
+            <h1 style="margin: 150px;"> Teachers  <br> Are <br> Register Here!!!!!!</h1> 
+              <!-- <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Password</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let teach of teacherService.teachers">
+                    <td>{{teach.name}}</td>
+                    <td>{{teach.email}}</td>
+                    <td>{{teach.contact}}</td>                    
+                    <td>{{teach.password}}</td>
+                    <td>
+                        <a class="action-btn" (click)="onEdit(teach)">
+                            <i class="fa fa-edit">edit</i>
+                          </a>
+                          <a class="action-btn" (click)="onDelete(teach._id,teacherForm)">
+                            <i class="fa fa-trash">delete</i>
+                          </a>
+                        </td>
+                    </tr>
+                      </table> -->
+    
+              
+          </div>
+        </section>
+      </div>  
