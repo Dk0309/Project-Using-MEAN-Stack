@@ -1,0 +1,85 @@
+ <header>
+    <div class="header">
+        <h1> College Event Management System </h1>
+        <p>A full solution for managing college events</p> 
+        
+    </div>
+    <nav>
+        <div class="menu">
+            <ul>
+            <li><a [routerLink]="['/adminpage/manageteacher']" ><i class="fa fa-user-o"></i>Manage Teacher</a></li>
+            <li><a [routerLink]="['/adminpage/manageevent']" ><i class="fa fa-users"></i>Manage Event</a></li>
+            <li><a [routerLink]="['/adminpage/viewstudents']"><i class="fa fa-user"></i>View Students</a></li>
+            <li><a [routerLink]="['/adminpage/viewresults']"><i class="fa fa-registered"></i>View Results</a>
+            <li><a [routerLink]="['/adminpage/viewcontacts']"><i class="fa fa-envelope"></i>View Contacts</a>
+   
+            <li><button type="submit" class="btn primary-btn" (click)="OnClick()">Logout</button>><i class="fa fa-user-o"></i>
+            </ul>
+          
+    
+    </div>
+    </nav>
+    </header>
+    
+<router-outlet></router-outlet>
+           
+    
+
+
+
+    <div class="footer-main-div"> 
+            <div class="team-section">
+                <h1>Our Team</h1>
+                <span class="border"></span>
+                <div class="ps">
+                    <a href="#DK"><img src="assets/Deepak.png" alt=""></a>
+                    <a href="#AA"><img src="assets/Akansha.jpg" alt=""></a>
+                    <a href="#VKR"><img src="assets/Vimlesh.jpg" alt=""></a>
+                    <a href="#PK"><img src="assets/Pawan.jpg" alt=""></a>
+            
+                </div>
+                <div class="section" id="DK">
+                    <span class="name">Deepak Gupta</span>
+                    <span class="border"></span>
+            <p> 
+                I am Deepak Gupta and I belong to Bihar , Currently I live in Ghaziabad and persuing B-Tech from Sunder Deep Engineering College. </p>
+                </div>
+                <div class="section" id="AA">
+                    <span class="name">Akansha Aggarwal</span>
+                    <span class="border"></span>
+            <p> 
+                I am Akansha Aggarwal and I belong to New Delhi and I am persuing B-Tech from Sunder Deep Engineering College.
+            </p>
+                </div>
+                <div class="section" id="VKR">
+                    <span class="name">Vimlesh kr. Rai</span>
+                    <span class="border"></span>
+            <p> 
+                I am Vimlesh kr. Rai and I belong to Vanarasi,Currently I live in Ghaziabad and persuing B-Tech from Sunder Deep Engineering College.
+            
+            </p>
+                </div>
+                <div class="section" id="PK">
+                    <span class="name">Pawan kumar</span>
+                    <span class="border"></span>
+            <p> 
+                I am Pawan kumar and I am from Noida and persuing B-Tech from SunderDeep Engineering College.
+            
+            </p>
+                </div>
+            </div> 
+                <div class="footer-social-icons">
+                <ul>
+                  <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#" target="blank"><i class="fa fa-youtube"></i></a></li>
+                  <li><a href="#" target="blank"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div> 
+            </div> 
+            <div class="footer-bottom">
+              <p>Design by:<a href="#">SunderDeep 4th Year Student</a></p>
+            </div>
+        
+        
