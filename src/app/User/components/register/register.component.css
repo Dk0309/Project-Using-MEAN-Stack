@@ -1,0 +1,74 @@
+ .color{
+    background-size: cover;
+    height:100vh;
+   background-color: lightblue;
+    background-position: center;
+    
+}
+ 
+
+
+h1{
+    text-align: center;
+    text-decoration: none;
+    color: brown;
+    font-style: italic;
+    font-size: 50px;
+    padding-top: 10px;
+}
+#name{
+    width: 80%;
+    padding: 5px;
+    border-radius: 5%;
+    outline: 0;
+    border: 1px solid lightgrey;
+}
+table{
+    position:center;
+    color: white;
+    background-color: rgb(8,48,80);
+    font-size: 16px;
+    box-sizing: border-box;
+    position: center;
+    font-family: serif;
+    margin-left: 25%;
+    padding: 5px;
+    border: 5px solid white;
+    /* text-align: -webkit-center; */
+    background-position: center;
+}
+
+
+ hr{
+width: 500%;
+margin-left: auto;
+margin-right: auto;
+opacity: 0.5;
+ }
+.btn{
+    width: 100%;
+    background: none;
+    border:  green;
+    color: red;
+    padding: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    position: center;
+    text-align: center;
+    margin-left: 55%;
+
+}
+
+.alert{
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.success{
+    padding: 20px;
+    background-color: #249424;
+    color: white;
+    margin-bottom: 15px;
+}

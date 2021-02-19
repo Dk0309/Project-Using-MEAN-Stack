@@ -1,1 +1,130 @@
+<div class="color">
+    <html>
+        <body >
+           <h1>Register HERE!!</h1>&nbsp;&nbsp;&nbsp;&nbsp;
+           <form #registerForm="ngForm" (ngSubmit)="registerForm.valid && onSubmit(registerForm)">
+     
+          <table  cellpadding="10">
+            <tr>
+              <td >Registration Form</td></tr>
+            <hr>
+            <tr>
+              <td>Personal Details..</td>
+            </tr>
+            <hr>
+            <tr>
+              <td>Name*</td>
+              <td><input type="text" #name="ngModel" [(ngModel)]="userService.selectedUser.name" name="name"
+                placeholder="Enter your Name" required [ngClass]="{'invalid-textbox' :registerForm.submitted && !name.valid}" >
+               <div *ngIf="registerForm.submitted && !name.valid">
+                 <label class="validation-message">This field is required.</label>
+               </div>
+            </td>
+               <td>MobileNumber*</td>
+                  <td><input type="number" #mobilenumber="ngModel" [(ngModel)]="userService.selectedUser.mobilenumber" name="mobilenumber" 
+                    placeholder="Enter your Mobile Number " required [ngClass]="{'invalid-textbox' :registerForm.submitted && !mobilenumber.valid}" >
+                    <div *ngIf="registerForm.submitted && !mobilenumber.valid">
+                      <label class="validation-message">This field is required.</label>
+                    </div> 
+                    </td>
+                </tr> 
+              
+                  <tr>
+                    <td>Password*</td>
+                    <td><input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password"  
+                      placeholder="Enter your Password " minlength="4" required [ngClass]="{'invalid-textbox' :registerForm.submitted && !password.valid }" >
+                      <div *ngIf="registerForm.submitted && password.errors">
+                        <label *ngIf="password.errors.required" class="validation-message">This field is required</label>
+                        <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+                      </div>
+                    </td>
+                  
+                      <!-- <td>Confirm Password*</td>
+                      <td><input type="password" #CPass="ngModel" [(ngModel)]="userService.selectedUser.CPass" name="CPass"    
+                        placeholder="Confirm your Password " >
+                        
+                      </td> -->
+                    </tr>
+                    
+                      <tr> 
+                          <td>Email*</td>
+     <td><input type="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email"   
+            placeholder="Enter your Email"  required [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :registerForm.submitted && !email.valid}">
+                       <div *ngIf="registerForm.submitted && email.errors">
+                         <label *ngIf="email.errors.required" class="validation-message">This field is required.</label>
+                       <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+                        </div>     
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Address Details..</td>
+                        </tr>
+                        <hr>
+                        <tr>
+                        <td>City*</td>
+                        <td><input type="text" #city="ngModel" [(ngModel)]="userService.selectedUser.city" name="city"   
+                          placeholder="Enter your City" required [ngClass]="{'invalid-textbox' :registerForm.submitted && !city.valid}">
+                          <div *ngIf="registerForm.submitted && !city.valid">
+                            <label class="validation-message">This field is required.</label>
+                          </div>
+                        </td>
+                      <td>Pincode</td>
+                                <td><input type="text" #pincode="ngModel" [(ngModel)]="userService.selectedUser.pincode" name="pincode" 
+                                 placeholder="Enter your Pincode" required [ngClass]="{'invalid-textbox' :registerForm.submitted && !pincode.valid}"></td>
+                                 <!-- <div *ngIf="registerForm.submitted && !Pincode.valid">
+                                  <label class="validation-message">This field is required.</label>
+                                </div> -->
+                                </tr>
+                              <tr>
+                                  <td>State*</td>
+                          <td><input type="text" #state="ngModel" [(ngModel)]="userService.selectedUser.state" name="state"   
+                                  placeholder="Enter your State" required [ngClass]="{'invalid-textbox' :registerForm.submitted && !state.valid}">
+                                  <div *ngIf="registerForm.submitted && !state.valid">
+                                    <label class="validation-message">This field is required.</label>
+                                  </div>
+                                </td>
+                                
+                                 
+                                  <td>Country*</td>
+                                  <td><input type="text" #country="ngModel" [(ngModel)]="userService.selectedUser.country" name="country"  
+                                    placeholder="Enter your Country" required [ngClass]="{'invalid-textbox' :registerForm.submitted && !country.valid}" >
+                                    <div *ngIf="registerForm.submitted && !country.valid">
+                                      <label class="validation-message">This field is required.</label>
+                                    </div> 
+                                </td> 
+                                  </tr>
+      
+      
+                     
+                       
+                          <tr> 
+                            <td>Address*</td>
+                            <td><textarea name="address" #address="ngModel" [(ngModel)]="userService.selectedUser.address" rows="5" cols="26" placeholder="Enter your Address"   required [ngClass]="{'invalid-textbox' :registerForm.submitted && !address.valid}"></textarea>
+                              <!-- <div *ngIf="registerForm.submitted && Address.valid" >
+                                <label class="validation-message">This field is required.</label>
+                                <label *ngIf="Password.errors.minlength" class="validation-message">Enter atleast 10 characters.</label>
+    
+                              </div> -->
+                            </td> 
+                          </tr>
+      
+      
+                            
+                                
+      <td align-center colspan="2">
+        <input type="Submit" value="Register">               
+      </td>
+                              
+                        
+          </table>
+          </form>
+        </body>
+      </html>
+</div>
+<div class="success" *ngIf="showSuccessMessage">
+    Saved successfully
+  </div>
 
+  <div class="alert" *ngIf="serverErrorMessage">
+    {{serverErrorMessage}}
+  </div>
