@@ -1,1 +1,72 @@
+<div class="color">
+    <section>
+      <div class="form1">
+            
+                <form #resultForm="ngForm" (ngSubmit)="onSubmit(resultForm)"> 
+                    <div class="table"  cellpadding="10">
+                      <div class="formlimit">
+                        <td><input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="resultService.selectedResult._id"></td>
+                  <tr>
+                        <td>Event Name*</td>
+                  
+                  <td><input type="text" name="eventname" #eventname="ngModel" [(ngModel)]="resultService.selectedResult.eventname" 
+                          placeholder="Enter event name" required >
+                         
+                      </td>
+                    
+                      </tr>
+                      <tr>
+                         <td>Position*</td>
+                            <td><input type="text" name="position" #position="ngModel" [(ngModel)]="resultService.selectedResult.position" 
+                              placeholder="Enter position" required  >
+                              
+                              </td>
+                          </tr> 
+                        
+                            <tr>
+                              <td>Holder Name*</td>
+                              <td><input type="text" name="holdername" #holdername="ngModel" [(ngModel)]="resultService.selectedResult.holdername"  
+                                placeholder="Enter position holder name " required>
+                                
+                              </td>
+                                </tr>
+                              
+                                
+                                <tr>          
+                <td align-center colspan="2">
+                
+                    <input class="button" type="reset" (click)="resetForm(resultForm)">
+                    <input class="button"  type="submit" [disabled]="!resultForm.valid">
+                </td>
+              </tr>                     
+              </div>         
+                    </div>
+                    </form>   
+      </div>    
+      <div class="table1">
+          <table>
+            <tr>
+                <th>Event Name</th>
+                <th>Position</th>
+                <th>Holder Name</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let rus of resultService.results">
+                <td>{{rus.eventname}}</td>
+                <td>{{rus.position}}</td>
+                <td>{{rus.holdername}}</td>
+                <td>
+                    <a class="action-btn" (click)="onEdit(rus)">
+                        <i class="fa fa-edit">edit</i>
+                      </a>
+                      <a class="action-btn" (click)="onDelete(rus._id,resultForm)">
+                        <i class="fa fa-trash">delete</i>
+                      </a>
+                    </td>
+                </tr>
+                  </table>
 
+          
+      </div>
+    </section>
+  </div>
