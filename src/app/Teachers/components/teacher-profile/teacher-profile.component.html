@@ -1,1 +1,24 @@
-
+<body>
+        <table *ngIf="teacherDetails" class="table-fill">
+                <thead>
+                    <tr>
+                        <th colspan="2" class="text-center">Teacher Profile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First Name</td>
+                        <td>{{teacherDetails.name.split(' ')[0]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>{{teacherDetails.name.split(' ')[1]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{teacherDetails.email}}</td>
+                    </tr>
+                    
+                </tbody>
+              </table>
+              </body>
