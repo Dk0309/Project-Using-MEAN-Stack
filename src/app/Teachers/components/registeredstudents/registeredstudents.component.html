@@ -1,1 +1,16 @@
-
+<div class="color">
+    <div class="table1">
+        <table>
+          <tr>
+              <th>Name</th>
+              <th>Event</th>
+               </tr>
+          <tr *ngFor="let check of checkoutService.checkouts">
+              <td>{{check.name}}</td>
+              <td>{{check.event}}</td>
+              </tr>
+                </table>
+    
+        
+    </div>
+    </div>
