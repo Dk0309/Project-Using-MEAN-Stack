@@ -9,12 +9,11 @@ Navigate to http://localhost:4200/ for automatically
 reloading when you do any changes on any of the files
 
 # Component
-To generate component type Command - 
-ng generate component copmponent-name
-You can aslo use ng generate to generate service|module|directive and many more.
+To generate component, type Command - ng generate component copmponent-name
+You can alSo use ng generate to generate service|module|directive and many more.
 
 # Unit Test
-Run ng test to excute the unit test
+Run ng test to execute the unit test
 
 
 # help
